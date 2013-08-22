@@ -1,5 +1,3 @@
-:
-
 Übersicht
 =========
 Klinai is an adapter for `CouchDB`_ that is able to manage several CouchDB at the same time.
