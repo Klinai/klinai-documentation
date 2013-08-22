@@ -12,20 +12,20 @@ Installieren - Composer
 
 Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.json" ein.
 
-... composer.json::
-	\{
-		"require": \{
+.. code-block:: javascript
+	{
+		"require": {
 			"klinai/klinai": "dev-master"
-		\}
-	\}
+		}
+	}
 
-
-... erst installation:: bash
+erst installation
+.. code-block:: bash
 	# php composer.phar self-update
 	# php composer.phar install
 
-
-... aktualisieren:: bash
+aktualisieren
+.. code-block:: bash
 	# php composer.phar self-update
 	# php composer.phar update
 
@@ -40,7 +40,7 @@ Downloade die Bibliothek von `github`_ und binde diese in deine Autoload-Methode
 Einbinden
 ---------
 
-::
+.. code-block:: php
 	use Klinai\Client\Client;
 	use Klinai\Client\ClientConfig;
 	
@@ -70,7 +70,7 @@ Sollte man keine ID angeben generiert Couch eine eigene ID (ähnlich dem *auto_i
 aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthält dann die ID, sowie die RevisionsNummer(*_rev*).
 
 
-... anlegen::
+.. code-block:: php
 	$docDataA = array(
 		'name'=>'foo',
 		'email'=>'foo@example.org',
@@ -88,7 +88,7 @@ aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthä
 
 Dokument anfordern
 ------------------
-::
+.. code-block:: php
 	...
 	$docA = $client->getDoc('client_test1', 'someDocumentId');
 	$docB = $client->getDoc('client_test1', 'otherDocumentId');
@@ -98,7 +98,7 @@ Dokument anfordern
 Werte eines bestimmten Dokumentes auslesen
 ------------------
 Angenommen es gibt ein document "x" mit name, email
-::
+.. code-block:: php
 	...
 	$docA = $client->getDoc('client_test1', 'someDocumentId');
 	echo $docA->name . "\n";
@@ -107,7 +107,7 @@ Angenommen es gibt ein document "x" mit name, email
 Werte eines bestimmten Dokumentes ändern
 ------------------
 info zu autorecording
-::
+.. code-block:: php
     ...
 	$docA = $client->getDoc('client_test1', 'someDocumentId');
 	$docA->name = "fooBar";
@@ -121,7 +121,7 @@ info zu autorecording
 	
 Dokument löschen
 ------------------
-::
+.. code-block:: php
     ...
 	$docA = $client->getDoc('client_test1', 'someDocumentId');
 	$client->deleteDocument('client_test1', $docA);
