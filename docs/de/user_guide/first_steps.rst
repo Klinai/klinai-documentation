@@ -22,14 +22,15 @@ Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.
 
 erst installation
 .. code-block:: bash
-
-    # php composer.phar self-update
-    # php composer.phar install
+    
+    > php composer.phar self-update
+    > php composer.phar install
 
 aktualisieren
 .. code-block:: bash
-    # php composer.phar self-update
-    # php composer.phar update
+    
+    > php composer.phar self-update
+    > php composer.phar update
 
 
 
