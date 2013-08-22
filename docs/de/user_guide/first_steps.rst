@@ -31,8 +31,8 @@ aktualisieren
 
 .. code-block:: shell
     
-    php composer.phar self-update
-    php composer.phar update
+    # php composer.phar self-update
+    # php composer.phar update
 
 
 
@@ -47,6 +47,7 @@ Einbinden
 
 
 .. code-block:: php
+
     use Klinai\Client\Client;
     use Klinai\Client\ClientConfig;
     
