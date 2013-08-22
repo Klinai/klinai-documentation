@@ -24,8 +24,8 @@ erst installation
 
 .. code-block:: shell
     
-    php composer.phar self-update
-    php composer.phar install
+    # php composer.phar self-update
+    # php composer.phar install
 
 aktualisieren
 
@@ -150,8 +150,7 @@ Dokument löschen
     $docB->delete();
     
 
-`prev`_
-`next`_
+`prev`_ | `next`_
 
 .. _`next`: ../index.rst
 .. _`prev`: ../index.rst
