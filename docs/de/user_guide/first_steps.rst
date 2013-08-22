@@ -12,7 +12,7 @@ Installieren - Composer
 
 Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.json" ein.
 
-.. composer.json::
+... composer.json::
 	\{
 		"require": \{
 			"klinai/klinai": "dev-master"
@@ -20,12 +20,12 @@ Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.
 	\}
 
 
-.. erst installation:: bash
+... erst installation:: bash
 	# php composer.phar self-update
 	# php composer.phar install
 
 
-.. aktualisieren:: bash
+... aktualisieren:: bash
 	# php composer.phar self-update
 	# php composer.phar update
 
@@ -40,7 +40,7 @@ Downloade die Bibliothek von `github`_ und binde diese in deine Autoload-Methode
 Einbinden
 ---------
 
-.. ::
+::
 	use Klinai\Client\Client;
 	use Klinai\Client\ClientConfig;
 	
@@ -70,8 +70,7 @@ Sollte man keine ID angeben generiert Couch eine eigene ID (ähnlich dem *auto_i
 aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthält dann die ID, sowie die RevisionsNummer(*_rev*).
 
 
-::
-    ...
+... anlegen::
 	$docDataA = array(
 		'name'=>'foo',
 		'email'=>'foo@example.org',
@@ -90,7 +89,7 @@ aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthä
 Dokument anfordern
 ------------------
 ::
-    ...
+	...
 	$docA = $client->getDoc('client_test1', 'someDocumentId');
 	$docB = $client->getDoc('client_test1', 'otherDocumentId');
 
@@ -100,7 +99,7 @@ Werte eines bestimmten Dokumentes auslesen
 ------------------
 Angenommen es gibt ein document "x" mit name, email
 ::
-    ...
+	...
 	$docA = $client->getDoc('client_test1', 'someDocumentId');
 	echo $docA->name . "\n";
 	echo $docA->email . "\n";
