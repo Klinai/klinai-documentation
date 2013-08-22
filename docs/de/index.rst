@@ -4,11 +4,10 @@
 Übersicht
 *********
 
-Klinai ist eine Adapter für `CouchDB`_ und ist in der Lage mehre CouchDB gleichzeitig zuverwalten.
-Diese Programmbibliothek bassiert auf *PHP* 5.4+ und *Zend-Http* 2.2.3+.
-Da CouchDB `stateless`_ arbeitet gibt es keine Begründung warum man einen Client wie für eine statefull
-Protokoll konzipiert und somit auf eine Datenbank pro Instance Limitiert. Weiter hin ist es es durch mehrfach Nutzung
-einfacher möglich Referencen über die Datenbank Grenzen hin weg aufzubauen.
+Klinai ist ein Adapter für `CouchDB`_ und ist in der Lage mehrere CouchDB gleichzeitig zu verwalten.
+Diese Programmbibliothek basiert auf *PHP* 5.4+ und *Zend-Http* 2.2.3+.
+CouchDB arbeitet `stateless`_, daher wurde Klinai so konzipiert um diese Vorteile auszuschöpfen.
+Zusätzlich wird hierdurch der Aufbau von Referenzen über Datenbanken-Grenzen vereinfacht.
 
 
 `next`_
