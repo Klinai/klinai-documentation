@@ -67,7 +67,7 @@ Zum Anlegen von neuen Dokumenten werden dem Client nur Arrays oder StdClass Obje
 Diese DatenArray's können alle Daten enthalten die mit Array's abgebildet werden können.
 Weiß man auf welche ID man das Objekt speichern möchte, kann man diese als Element mit angeben.
 Sollte man keine ID angeben generiert Couch eine eigene ID (ähnlich dem *auto_increment*
-aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthält dann die ID, sowie die RevisionsNummer.
+aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthält dann die ID, sowie die RevisionsNummer(*_rev*).
 
 
 ::
