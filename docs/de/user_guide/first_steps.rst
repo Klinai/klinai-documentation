@@ -13,21 +13,23 @@ Installieren - Composer
 Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.json" ein.
 
 .. code-block:: javascript
-	{
-		"require": {
-			"klinai/klinai": "dev-master"
-		}
-	}
+
+    {
+        "require": {
+            "klinai/klinai": "dev-master"
+        }
+    }
 
 erst installation
 .. code-block:: bash
-	# php composer.phar self-update
-	# php composer.phar install
+
+    # php composer.phar self-update
+    # php composer.phar install
 
 aktualisieren
 .. code-block:: bash
-	# php composer.phar self-update
-	# php composer.phar update
+    # php composer.phar self-update
+    # php composer.phar update
 
 
 
@@ -41,24 +43,24 @@ Einbinden
 ---------
 
 .. code-block:: php
-	use Klinai\Client\Client;
-	use Klinai\Client\ClientConfig;
-	
-	$config = new ClientConfig( array(
-		'databases'=>array(
-			'client_test1'=>array(
-				'dbname'=>'klinai_test_db1',
-				'host'=>'http://127.0.0.1:5984',
-			),
-			'client_test2'=>array(
-				'dbname'=>'klinai_test_db2',
-				'host'=>'http://127.0.0.1:5984',
-			)
-		),
-	));
-	
-	$client = new Client ();
-	$client->setConfig($config);
+    use Klinai\Client\Client;
+    use Klinai\Client\ClientConfig;
+    
+    $config = new ClientConfig( array(
+        'databases'=>array(
+            'client_test1'=>array(
+                'dbname'=>'klinai_test_db1',
+                'host'=>'http://127.0.0.1:5984',
+            ),
+            'client_test2'=>array(
+                'dbname'=>'klinai_test_db2',
+                'host'=>'http://127.0.0.1:5984',
+            )
+        ),
+    ));
+    
+    $client = new Client ();
+    $client->setConfig($config);
 
 
 Dokument anlegen
@@ -71,27 +73,27 @@ aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthä
 
 
 .. code-block:: php
-	$docDataA = array(
-		'name'=>'foo',
-		'email'=>'foo@example.org',
-	);
-	$docA = $client->storeDoc('client_test1', $docDataA);
-	
-	
-	$docDataB = array(
-		'id'=>'someDocumentId',
-		'name'=>'foo',
-		'email'=>'foo@example.org',
-	);
-	$docB = $client->storeDoc('client_test1', $docDataB);
-	
+    $docDataA = array(
+        'name'=>'foo',
+        'email'=>'foo@example.org',
+    );
+    $docA = $client->storeDoc('client_test1', $docDataA);
+    
+    
+    $docDataB = array(
+        'id'=>'someDocumentId',
+        'name'=>'foo',
+        'email'=>'foo@example.org',
+    );
+    $docB = $client->storeDoc('client_test1', $docDataB);
+    
 
 Dokument anfordern
 ------------------
 .. code-block:: php
-	...
-	$docA = $client->getDoc('client_test1', 'someDocumentId');
-	$docB = $client->getDoc('client_test1', 'otherDocumentId');
+    ...
+    $docA = $client->getDoc('client_test1', 'someDocumentId');
+    $docB = $client->getDoc('client_test1', 'otherDocumentId');
 
 
 
@@ -99,36 +101,36 @@ Werte eines bestimmten Dokumentes auslesen
 ------------------
 Angenommen es gibt ein document "x" mit name, email
 .. code-block:: php
-	...
-	$docA = $client->getDoc('client_test1', 'someDocumentId');
-	echo $docA->name . "\n";
-	echo $docA->email . "\n";
+    ...
+    $docA = $client->getDoc('client_test1', 'someDocumentId');
+    echo $docA->name . "\n";
+    echo $docA->email . "\n";
 
 Werte eines bestimmten Dokumentes ändern
 ------------------
 info zu autorecording
 .. code-block:: php
     ...
-	$docA = $client->getDoc('client_test1', 'someDocumentId');
-	$docA->name = "fooBar";
-	$docA->email = "fooBar";
-	
-	$docA->set(array(
-		'name' =>'fooBar',
-		'email' =>'fooBar@exampel.org'
-	));
-	
-	
+    $docA = $client->getDoc('client_test1', 'someDocumentId');
+    $docA->name = "fooBar";
+    $docA->email = "fooBar";
+    
+    $docA->set(array(
+        'name' =>'fooBar',
+        'email' =>'fooBar@exampel.org'
+    ));
+    
+    
 Dokument löschen
 ------------------
 .. code-block:: php
     ...
-	$docA = $client->getDoc('client_test1', 'someDocumentId');
-	$client->deleteDocument('client_test1', $docA);
-	
-	$docB = $client->getDoc('client_test1', 'otherDocumentId');
-	$docB->delete();
-	
+    $docA = $client->getDoc('client_test1', 'someDocumentId');
+    $client->deleteDocument('client_test1', $docA);
+    
+    $docB = $client->getDoc('client_test1', 'otherDocumentId');
+    $docB->delete();
+    
 
 `prev`_
 `next`_
