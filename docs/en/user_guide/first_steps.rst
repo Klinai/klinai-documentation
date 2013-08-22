@@ -94,7 +94,7 @@ The client returns an object containing the ID and the revisionnumber (*_rev*).
     $docB = $client->storeDoc('client_test1', $docDataB);
 	
 
-Dokument anfordern
+Request document
 ------------------
 
 
@@ -106,9 +106,9 @@ Dokument anfordern
 
 
 
-Werte eines bestimmten Dokumentes auslesen
+Read values from a specific object
 ------------------
-Angenommen es gibt ein document "x" mit name, email
+E.G. there is a document "x" with the elements name, email.
 
 
 .. code-block:: php
@@ -118,7 +118,7 @@ Angenommen es gibt ein document "x" mit name, email
     echo $docA->name . "\n";
     echo $docA->email . "\n";
 
-Werte eines bestimmten Dokumentes ändern
+Update values of a specific object
 ------------------
 info zu autorecording
 
@@ -136,7 +136,7 @@ info zu autorecording
     ));
 	
 	
-Dokument löschen
+Delete a specific document
 ------------------
 
 
