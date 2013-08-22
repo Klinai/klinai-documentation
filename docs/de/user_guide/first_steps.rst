@@ -12,20 +12,20 @@ Installieren - Composer
 
 Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.json" ein.
 
-::
+.. composer.json::
 	\{
 		"require": \{
 			"klinai/klinai": "dev-master"
 		\}
 	\}
 
-erst installation
-::
+
+.. erst installation:: bash
 	# php composer.phar self-update
 	# php composer.phar install
 
-aktualisieren
-::
+
+.. aktualisieren:: bash
 	# php composer.phar self-update
 	# php composer.phar update
 
@@ -40,7 +40,7 @@ Downloade die Bibliothek von `github`_ und binde diese in deine Autoload-Methode
 Einbinden
 ---------
 
-::
+.. ::
 	use Klinai\Client\Client;
 	use Klinai\Client\ClientConfig;
 	
