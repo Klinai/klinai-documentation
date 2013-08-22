@@ -1,8 +1,7 @@
-.. _introduction.overview:
+:
 
-*********
 Übersicht
-*********
+=========
 
 Klinai ist ein Adapter für `CouchDB`_ und ist in der Lage mehrere CouchDB gleichzeitig zu verwalten.
 Diese Programmbibliothek basiert auf *PHP* 5.4+ und *Zend-Http* 2.2.3+.
