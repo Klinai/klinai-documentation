@@ -21,13 +21,13 @@ Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.
     }
 
 erst installation
-.. code-block:: bash
+.. code-block:: shell
     
     php composer.phar self-update
     php composer.phar install
 
 aktualisieren
-.. code-block:: bash
+.. code-block:: shell
     
     php composer.phar self-update
     php composer.phar update
@@ -102,7 +102,8 @@ Werte eines bestimmten Dokumentes auslesen
 ------------------
 Angenommen es gibt ein document "x" mit name, email
 .. code-block:: php
-    ...
+
+    // ...
     $docA = $client->getDoc('client_test1', 'someDocumentId');
     echo $docA->name . "\n";
     echo $docA->email . "\n";
@@ -111,7 +112,8 @@ Werte eines bestimmten Dokumentes ändern
 ------------------
 info zu autorecording
 .. code-block:: php
-    ...
+
+    // ...
     $docA = $client->getDoc('client_test1', 'someDocumentId');
     $docA->name = "fooBar";
     $docA->email = "fooBar";
@@ -125,7 +127,8 @@ info zu autorecording
 Dokument löschen
 ------------------
 .. code-block:: php
-    ...
+
+    // ...
     $docA = $client->getDoc('client_test1', 'someDocumentId');
     $client->deleteDocument('client_test1', $docA);
     
