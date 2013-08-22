@@ -21,12 +21,14 @@ Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.
     }
 
 erst installation
+
 .. code-block:: shell
     
     php composer.phar self-update
     php composer.phar install
 
 aktualisieren
+
 .. code-block:: shell
     
     php composer.phar self-update
@@ -42,6 +44,7 @@ Downloade die Bibliothek von `github`_ und binde diese in deine Autoload-Methode
 
 Einbinden
 ---------
+
 
 .. code-block:: php
     use Klinai\Client\Client;
@@ -74,6 +77,7 @@ aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthä
 
 
 .. code-block:: php
+
     $docDataA = array(
         'name'=>'foo',
         'email'=>'foo@example.org',
@@ -91,8 +95,11 @@ aus SQL-basierten Datenbanken). Das von dem Client zurückgegebene Objekt enthä
 
 Dokument anfordern
 ------------------
+
+
 .. code-block:: php
-    ...
+
+    // ...
     $docA = $client->getDoc('client_test1', 'someDocumentId');
     $docB = $client->getDoc('client_test1', 'otherDocumentId');
 
@@ -101,6 +108,8 @@ Dokument anfordern
 Werte eines bestimmten Dokumentes auslesen
 ------------------
 Angenommen es gibt ein document "x" mit name, email
+
+
 .. code-block:: php
 
     // ...
@@ -111,6 +120,8 @@ Angenommen es gibt ein document "x" mit name, email
 Werte eines bestimmten Dokumentes ändern
 ------------------
 info zu autorecording
+
+
 .. code-block:: php
 
     // ...
@@ -126,6 +137,8 @@ info zu autorecording
     
 Dokument löschen
 ------------------
+
+
 .. code-block:: php
 
     // ...
