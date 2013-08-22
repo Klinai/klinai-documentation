@@ -13,11 +13,11 @@ Installieren - Composer
 Downloade `composer.phar`_ und fügen folgende Abhängigkeit in deine "composer.json" ein.
 
 ::
-	{
-		"require": {
+	\{
+		"require": \{
 			"klinai/klinai": "dev-master"
-		}
-	}
+		\}
+	\}
 
 erst installation
 ::
