@@ -10,5 +10,10 @@ Da CouchDB `stateless`_ arbeitet gibt es keine Begründung warum man einen Clien
 Protokoll konzipiert und somit auf eine Datenbank pro Instance Limitiert. Weiter hin ist es es durch mehrfach Nutzung
 einfacher möglich Referencen über die Datenbank Grenzen hin weg aufzubauen.
 
+
+`next`_
+
+.. _`next`: ./user_guide/first_steps.rst
+.. _`prev`: .
 .. _`CouchDB`: http://couchdb.apache.org
 .. _`stateless`: http://en.wikipedia.org/wiki/Stateless_protocol
